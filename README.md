@@ -85,6 +85,18 @@ The inference engine (`backend/app/pipeline/inference.py`) evaluates the real-ti
 The final prediction sent to the frontend is not a blind vote, but a calculated matrix multiplication where models proven to handle specific variances are trusted more heavily:
 `Weights = { Transformer: 0.35, LSTM: 0.3, GradientBoosting: 0.2, AR-ARCH: 0.1, GaussianHMM: 0.05 }`
 
+### **Performance Visualizations**
+Here is a complete breakdown of the base model accuracy, F1-scores, and the Orchestrator Weighting distribution calculated by the ensemble.
+
+<div align="center">
+  <img src="output/accuracy_comparison.png" alt="Accuracy Comparison" width="48%">
+  <img src="output/detailed_metrics_comparison.png" alt="Detailed Metrics" width="48%">
+</div>
+<div align="center">
+  <img src="output/ensemble_weights.png" alt="Ensemble Weights" width="48%">
+  <img src="output/accuracy_vs_weight.png" alt="Accuracy vs Weight" width="48%">
+</div>
+
 ---
 
 ## 🛡️ Explainable AI (XAI) & Privacy
